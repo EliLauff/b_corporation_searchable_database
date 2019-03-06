@@ -2,15 +2,14 @@ class CreateCompanies < ActiveRecord::Migration[4.2]
     def change
         create_table :companies do |t|
             t.string :name
-            t.boolean :current_status
+            t.string :current_status
             t.string :description
-            t.integer :industry_id
+            t.string :industry
             t.string :products_and_services
-            t.integer :country_id
+            t.string :country
             t.string :size
             t.string :b_corp_profile_url
             t.string :website_url
-            t.integer :assessment_year
             t.float :overall_score
             t.float :community_score
             t.float :customers_score

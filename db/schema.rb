@@ -13,22 +13,21 @@
 ActiveRecord::Schema.define(version: 2) do
 
   create_table "companies", force: :cascade do |t|
-    t.string  "name"
-    t.boolean "current_status"
-    t.string  "description"
-    t.integer "industry_id"
-    t.string  "products_and_services"
-    t.integer "country_id"
-    t.string  "size"
-    t.string  "b_corp_profile_url"
-    t.string  "website_url"
-    t.integer "assessment_year"
-    t.float   "overall_score"
-    t.float   "community_score"
-    t.float   "customers_score"
-    t.float   "environment_score"
-    t.float   "governance_score"
-    t.float   "workers_score"
+    t.string "name"
+    t.string "current_status"
+    t.string "description"
+    t.string "industry"
+    t.string "products_and_services"
+    t.string "country"
+    t.string "size"
+    t.string "b_corp_profile_url"
+    t.string "website_url"
+    t.float  "overall_score"
+    t.float  "community_score"
+    t.float  "customers_score"
+    t.float  "environment_score"
+    t.float  "governance_score"
+    t.float  "workers_score"
   end
 
   create_table "countries", force: :cascade do |t|
