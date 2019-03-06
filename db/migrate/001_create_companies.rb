@@ -4,9 +4,9 @@ class CreateCompanies < ActiveRecord::Migration[4.2]
             t.string :name
             t.string :current_status
             t.string :description
-            t.string :industry
+            t.integer :industry_id
             t.string :products_and_services
-            t.string :country
+            t.integer :country_id
             t.string :size
             t.string :b_corp_profile_url
             t.string :website_url
