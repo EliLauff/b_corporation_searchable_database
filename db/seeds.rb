@@ -7,8 +7,8 @@ CSV.foreach("./lib/b_corp_impact_data.csv", :encoding => 'windows-1251:utf-8') d
     if stored_name != nil 
         if stored_name != row[0]
             new_company = Company.new(name: row[0])
-            industry_object = Industry.find_or_create_by(name: row[4])
-            country_object = Country.find_or_create_by(name: row[7])
+            industry_object = Industry.find_or_create_by(name: row[4].to_s.split.map(&:capitalize).join(' '))
+            country_object = Country.find_or_create_by(name: row[7].to_s.split.map(&:capitalize).join(' '))
             industry_object.companies << new_company
             country_object.companies << new_company
             
@@ -24,7 +24,7 @@ CSV.foreach("./lib/b_corp_impact_data.csv", :encoding => 'windows-1251:utf-8') d
             new_company.environment_score = row[19]
             new_company.governance_score = row[20]
             new_company.workers_score = row[21]
-            
+
             new_company.save
             industry_object.save
             country_object.save
