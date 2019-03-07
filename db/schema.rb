@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "companies", force: :cascade do |t|
     t.string  "name"
@@ -28,14 +28,17 @@ ActiveRecord::Schema.define(version: 2) do
     t.float   "environment_score"
     t.float   "governance_score"
     t.float   "workers_score"
+    t.integer "index"
   end
 
   create_table "countries", force: :cascade do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "index"
   end
 
   create_table "industries", force: :cascade do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "index"
   end
 
 end

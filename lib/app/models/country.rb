@@ -14,9 +14,8 @@ class Country < ActiveRecord::Base
         counter = 0
         self.companies.order(:name).map do |company|
             counter += 1
-            puts "#{counter}) #{company.name}\n"
+            puts "#{counter}) Name: #{company.name}, Products and Services: #{company.products_and_services}\n"
         end
-        return nil
     end
 
     def show_companies_by_score
@@ -27,5 +26,9 @@ class Country < ActiveRecord::Base
         end
     end
 
-    
+    def self.find_by_index(given_index)
+        Country.all.find do |country|
+            country.index == given_index
+        end
+    end
 end
