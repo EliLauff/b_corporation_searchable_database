@@ -44,27 +44,27 @@ Upon selecting this option you'll be given a list of all countries that have cer
 - List all B-Corporations (ordered based on their [overall impact score](https://bimpactassessment.net/?_ga=2.100383774.107426085.1551979435-1068982412.1551718081)) present in that country.
 - Return to main menu.
 
-- Upon selecting a company, you'll be given a short description along with a decision to see more info or return to the main menu.
+Upon selecting a company, you'll be given a short description along with a decision to see more info or return to the main menu.
 
-  - The company info page contains info including the company's:
+- The company **info page** contains info including the company's:
 
-    - Name
-    - Certification status
-    - A brief description
-    - Industry
-    - Products and services offered
-    - Country
-    - Size
-    - B-Corporation profile webpage
-    - Company webpage
-    - Overall Impact Score
-    - Impact Score - Community
-    - Impact Score - Customers
-    - Impact Score - Environment
-    - Impact Score - Governance
-    - Impact Score - Workers
+  - Name
+  - Certification status
+  - A brief description
+  - Industry
+  - Products and services offered
+  - Country
+  - Size
+  - B-Corporation profile webpage
+  - Company webpage
+  - Overall Impact Score
+  - Impact Score - Community
+  - Impact Score - Customers
+  - Impact Score - Environment
+  - Impact Score - Governance
+  - Impact Score - Workers
 
-  - You may return to the main menu from this page.
+- You may return to the main menu from this page.
 
 **Option Two - Filter by Industry**
 
@@ -75,13 +75,13 @@ Upon selecting this option you'll be given a list of all industries that have ce
 - List all B-Corporations (ordered based on their [overall impact score](https://bimpactassessment.net/?_ga=2.100383774.107426085.1551979435-1068982412.1551718081)) present in that industry.
 - Return to main menu.
 
-- Upon selecting a company, you'll be given a short description along with a decision to see more info (see company info page above) or return to the main menu.
+- Upon selecting a company, you'll be given a short description along with a decision to see more info (see company **info page** above) or return to the main menu.
 
 **Option Three - Search by Company Name**
 
 Upon selecting this option you'll be asked to type the full name of the company you're searching for. The search is case-sensitive and strict.
 
-Upon a successful search, you'll be given a short description of the company along with a decision to see more info (see company info page above) or return to the main menu.
+Upon a successful search, you'll be given a short description of the company along with a decision to see more info (see company **info page** above) or return to the main menu.
 
 That's it! You're now a master. This database was designed to be simple in both design and usage.
 
@@ -94,5 +94,6 @@ That's it! You're now a master. This database was designed to be simple in both 
 
 **This work is licensed under the terms of the MIT license.**
 
-**B-Corporations Homepage:**[link](https://bcorporation.net/)"\n"
+**B-Corporations Homepage:**[link](https://bcorporation.net/)
+
 **CSV Source, data.world:**[link](https://data.world/blab/b-corp-impact-data)
