@@ -1,4 +1,4 @@
-# The Searchable B-Corporation Database
+# B-Corporation Searchable Database
 
 This database is used to demonstrate what we've learned about using ActiveRecord to access a Sqlite3 database, as well as modeling a many to many relationship in a practical manner.
 
