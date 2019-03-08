@@ -32,7 +32,7 @@ class Company < ActiveRecord::Base
         array_of_characters.each do |character|
             if character == "\n"
                 counter = 0
-            elsif counter >= 125 && character == " "
+            elsif counter >= 135 && character == " "
                 character = "\n"
                 counter = 0
             end

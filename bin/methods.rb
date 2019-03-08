@@ -8,6 +8,7 @@ def first_prompt
     prompt = TTY::Prompt.new
     clear_logs
     puts "Welcome to the B-Corp Database! \n\n"
+    puts "Certified B Corporations are businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability\nto balance profit and purpose. B Corps are accelerating a global culture shift to redefine success in business and build a more inclusive and sustainable economy.\n(credit: https://bcorporation.net/about-b-corps)\n\n"
     options = {"Filter by Country":1, "Filter by Industry":2, "Search by Company Name":3, "Exit Database":4}
     return_value = prompt.select("Begin by selecting one of our options:",options)
     first_menu(return_value)

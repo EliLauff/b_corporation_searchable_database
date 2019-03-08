@@ -10,3 +10,4 @@ require_all 'lib'
 
 old_logger = ActiveRecord::Base.logger
 ActiveRecord::Base.logger = nil
+
