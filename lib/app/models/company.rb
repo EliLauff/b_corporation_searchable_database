@@ -3,6 +3,7 @@ class Company < ActiveRecord::Base
     belongs_to :country
 
     def info
+        clear_logs
         puts "Name: #{self.name}\n"
         puts "Current Status: #{self.current_status}\n\n"
         puts "Description: \n#{self.description}\n\n"
@@ -19,6 +20,9 @@ class Company < ActiveRecord::Base
         puts "B Corp Company Profile: #{self.b_corp_profile_url}\n"
         puts "Website: #{self.website_url}\n"
         puts "\n"
+        puts "Please press any key to return to the main menu."
+        STDIN.getch
+        first_prompt
     end
 
     def self.names
