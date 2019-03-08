@@ -6,9 +6,9 @@ class Company < ActiveRecord::Base
         clear_logs
         puts "Name: #{self.name}\n"
         puts "Current Status: #{self.current_status}\n\n"
-        puts "Description: \n#{self.description}\n\n"
+        puts "Description: \n#{self.wrap_word(self.description)}\n\n"
         puts "Industry: #{self.industry.name}\n"
-        puts "Products and Services: #{self.products_and_services}\n"
+        puts "Products and Services: #{self.wrap_word(self.products_and_services)}\n"
         puts "Country of HQ: #{self.country.name}\n"
         puts "Number of Employees: #{self.size}\n\n"
         puts "Overall Impact Score: #{self.overall_score}\n"
@@ -23,6 +23,23 @@ class Company < ActiveRecord::Base
         puts "Please press any key to return to the main menu."
         STDIN.getch
         first_prompt
+    end
+
+    def wrap_word(string)
+        array_of_characters = string.split("")
+        new_string = []
+        counter = 0
+        array_of_characters.each do |character|
+            if character == "\n"
+                counter = 0
+            elsif counter >= 125 && character == " "
+                character = "\n"
+                counter = 0
+            end
+            new_string << character
+            counter += 1
+        end
+        new_string.join("").to_s
     end
 
     def self.names

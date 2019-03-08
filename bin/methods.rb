@@ -83,7 +83,7 @@ def country_menu_1(found_country)
     clear_logs
     puts "You have selected #{found_country.name}!\n\n"
     prompt = TTY::Prompt.new
-    return_value = prompt.select("Please select from the following options:",{"Filter by #{found_country.name} industries":1,"See all #{found_country.name} companies by name":2,"List all #{found_country.name} companies ranked by impact score":3})
+    return_value = prompt.select("Please select from the following options:",{"Filter by #{found_country.name} industries":1,"See all #{found_country.name} companies by name":2,"List all #{found_country.name} companies ranked by impact score":3,"Return to main menu":4})
     country_menu_2(found_country, return_value)
 end
 
@@ -115,6 +115,8 @@ def country_menu_2(found_country, return_value)
             end
             return_value = prompt.select("\nSelect a company from the list of all B-corporations in #{found_country.name}:\n",fill_hash)
             company_menu_1(return_value)
+        when 4
+            first_prompt
     end
 end
 
@@ -122,7 +124,7 @@ def industry_menu_1(found_industry)
     clear_logs
     puts "You have selected #{found_industry.name}!\n\n"
     prompt = TTY::Prompt.new
-    return_value = prompt.select("Please select from the following options:",{"Filter by countries that have B-Corps within the #{found_industry.name} industry":1,"See all #{found_industry.name} companies by name":2,"List all #{found_industry.name} companies ranked by impact score":3})
+    return_value = prompt.select("Please select from the following options:",{"Filter by countries that have B-Corps within the #{found_industry.name} industry":1,"See all #{found_industry.name} companies by name":2,"List all #{found_industry.name} companies ranked by impact score":3,"Return to main menu":4})
     industry_menu_2(found_industry, return_value)
 end
 
@@ -135,7 +137,7 @@ def industry_menu_2(found_industry, return_value)
             found_industry.countries.order(:name).each do |country|
                 fill_hash["#{country.name}"] = country
             end
-            return_value_country = prompt.select("\nMake a selection from all industries with B-Corporations present in #{found_country.name}:\n",fill_hash)
+            return_value_country = prompt.select("\nMake a selection from all countries with B-Corporations present in the #{found_industry.name} industry:\n",fill_hash)
             country_industry_menu(return_value_country, found_industry)
         when 2
             clear_logs
@@ -153,10 +155,13 @@ def industry_menu_2(found_industry, return_value)
             end
             return_value = prompt.select("\nSelect a company from the list of all B-corporations in the #{found_industry.name} industry:\n",fill_hash)
             company_menu_1(return_value)
+        when 4
+            first_prompt
     end
 end
 
 def country_industry_menu(country,industry)
+    puts "\nplease wait...\n\n"
     prompt = TTY::Prompt.new
     companies = []
     Company.all.order(:name).each do |company|
