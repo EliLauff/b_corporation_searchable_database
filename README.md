@@ -2,7 +2,7 @@
 
 This database is used to demonstrate what we've learned about using ActiveRecord to access a Sqlite3 database, as well as modeling a many to many relationship in a practical manner.
 
-The database was seeded using a CSV found at (https://data.world/blab/b-corp-impact-data) and aims to promote visibility of certified B-Corporations:
+The database was seeded using a CSV found at [data.world](https://data.world/blab/b-corp-impact-data) and aims to promote visibility of certified B-Corporations:
 
 "Certified B Corporations are businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose. B Corps are accelerating a global culture shift to redefine success in business and build a more inclusive and sustainable economy."
 
@@ -29,6 +29,7 @@ The database was made with the intention of demonstrating object relationships b
 - Through companies, a country has many industries and an industry has many countries.
 
 * Begin your database search by selecting one of four options:
+
   1. Filter by country first.
   2. Filter by industry first.
   3. Search based on company name.
@@ -93,5 +94,5 @@ That's it! You're now a master. This database was designed to be simple in both 
 
 **This work is licensed under the terms of the MIT license.**
 
-**B-Corporations Homepage:**[link](https://bcorporation.net/)
+**B-Corporations Homepage:**[link](https://bcorporation.net/)"\n"
 **CSV Source, data.world:**[link](https://data.world/blab/b-corp-impact-data)
