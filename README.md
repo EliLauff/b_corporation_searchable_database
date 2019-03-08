@@ -13,58 +13,85 @@ The database was seeded using a CSV found at (https://data.world/blab/b-corp-imp
 ### Initial Setup
 
 1. Fork and clone this repository to your local machine.
-2. Navigate to the cloned directory
-3. Run `bundle install`
-4. Run `rake db:migrate`
+2. Navigate to the cloned directory.
+3. Run `bundle install`.
+4. Run `rake db:migrate`.
 5. Run `rake db:seed` and wait a few moments while the database is populated.
 6. You're ready to go! Run `bundle exec ruby bin/run.rb` from the main project directory to enter the database.
 
-**Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
+### Navigating the Database
 
-### Option Two - Command Line CRUD App
+The database was made with the intention of demonstrating object relationships between the models of companies, countries and industries.
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have a minimum of three models.
-3. You should build out a CLI to give your user full CRUD ability for at least one of your resources. For example, build out a command line To-Do list. A user should be able to create a new to-do, see all todos, update a todo item, and delete a todo. Todos can be grouped into categories, so that a to-do has many categories and categories have many to-dos.
-4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
+- Each company has only one country and one industry.
+- A country has many companies.
+- An industry has many companies.
+- Through companies, a country has many industries and an industry has many countries.
 
-### Brainstorming and Proposing a Project Idea
+* Begin your database search by selecting one of four options:
+  1. Filter by country first.
+  2. Filter by industry first.
+  3. Search based on company name.
+  4. Exit the database.
 
-Projects need to be approved prior to launching into them, so take some time to brainstorm project options that will fulfill the requirements above. You must have a minimum of four [user stories](https://en.wikipedia.org/wiki/User_story) to help explain how a user will interact with your app. A user story should follow the general structure of `"As a <role>, I want <goal/desire> so that <benefit>"`. In example, if we were creating an app to randomly choose nearby restaurants on Yelp, we might write:
+**Option One - Filter by Country**
 
-- As a user, I want to be able to enter my name to retrieve my records
-- As a user, I want to enter a location and be given a random nearby restaurant suggestion
-- As a user, I should be able to reject a suggestion and not see that restaurant suggestion again
-- As a user, I want to be able to save to and retrieve a list of favorite restaurant suggestions
+Upon selecting this option you'll be given a list of all countries that have certified B-Corporations. Select one and you'll be brought to a menu for that country with the following options:
 
-## Instructions
+- Filter by industries present in that country, showing companies that belong to both the country and the industry.
+- List all B-Corporations (ordered alphabetically by name) that are present in that country.
+- List all B-Corporations (ordered based on their [overall impact score](https://bimpactassessment.net/?_ga=2.100383774.107426085.1551979435-1068982412.1551718081)) present in that country.
+- Return to main menu.
 
-1. Fork and clone this repository.
-2. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
-3. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
-4. Make sure your project checks off each of the above requirements.
-5. Prepare a video demo (narration helps!) describing how a user would interact with your working project.
+- Upon selecting a company, you'll be given a short description along with a decision to see more info or return to the main menu.
 
-- The video should:
-  - Have an overview of your project.(2 minutes max)
+  - The company info page contains info including the company's:
 
-6. Prepare a presentation to follow your video.(3 minutes max)
+    - Name
+    - Certification status
+    - A brief description
+    - Industry
+    - Products and services offered
+    - Country
+    - Size
+    - B-Corporation profile webpage
+    - Company webpage
+    - Overall Impact Score
+    - Impact Score - Community
+    - Impact Score - Customers
+    - Impact Score - Environment
+    - Impact Score - Governance
+    - Impact Score - Workers
 
-- Your presentation should:
-  - Describe something you struggled to build, and show us how you ultimately implemented it in your code.
-  - Discuss 3 things you learned in the process of working on this project.
-  - Address, if anything, what you would change or add to what you have today?
-  - Present any code you would like to highlight.
+  - You may return to the main menu from this page.
 
-7. _OPTIONAL, BUT RECOMMENDED_: Write a blog post about the project and process.
+**Option Two - Filter by Industry**
 
----
+Upon selecting this option you'll be given a list of all industries that have certified B-Corporations. Select one and you'll be brought to a menu for that industry with the following options:
 
-### Common Questions:
+- Filter by countries that have B-Corporations within that industry, showing companies that belong to both the industry and the country.
+- List all B-Corporations (ordered alphabetically by name) that are present in that industry.
+- List all B-Corporations (ordered based on their [overall impact score](https://bimpactassessment.net/?_ga=2.100383774.107426085.1551979435-1068982412.1551718081)) present in that industry.
+- Return to main menu.
 
-- How do I turn off my SQL logger?
+- Upon selecting a company, you'll be given a short description along with a decision to see more info (see company info page above) or return to the main menu.
 
-```ruby
-# in config/environment.rb add this line:
-ActiveRecord::Base.logger = nil
-```
+**Option Three - Search by Company Name**
+
+Upon selecting this option you'll be asked to type the full name of the company you're searching for. The search is case-sensitive and strict.
+
+Upon a successful search, you'll be given a short description of the company along with a decision to see more info (see company info page above) or return to the main menu.
+
+That's it! You're now a master. This database was designed to be simple in both design and usage.
+
+## Contributors
+
+- Eli Lauffenburger
+- Thomas Hansen
+
+## License and Citations
+
+**This work is licensed under the terms of the MIT license.**
+
+**B-Corporations Homepage:**[link](https://bcorporation.net/)
+**CSV Source, data.world:**[link](https://data.world/blab/b-corp-impact-data)

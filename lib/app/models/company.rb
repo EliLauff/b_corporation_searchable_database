@@ -20,8 +20,13 @@ class Company < ActiveRecord::Base
         puts "B Corp Company Profile: #{self.b_corp_profile_url}\n"
         puts "Website: #{self.website_url}\n"
         puts "\n"
-        puts "Please press any key to return to the main menu."
-        STDIN.getch
+        puts "Please press 'q' to return to the main menu."
+        loop do 
+            ch = STDIN.getch
+            if ch == "q"
+                break
+            end
+        end
         first_prompt
     end
 
