@@ -62,8 +62,13 @@ def company_menu_1(response)
         company_menu_2(return_value, found_company)
     else
         puts "\nUnfortunately, there is no company matching the name entered.\n"
-        puts "Please press any key to return to the main menu."
-        STDIN.getch
+        puts "Please press 'q' to return to the main menu."
+        loop do 
+            ch = STDIN.getch
+            if ch == "q"
+                break
+            end
+        end
         first_prompt
     end
 end

@@ -85,6 +85,10 @@ Upon a successful search, you'll be given a short description of the company alo
 
 That's it! You're now a master. This database was designed to be simple in both design and usage.
 
+**Additional Help**
+
+A video demo has been uploaded in the root directory of this repository to demonstrate usage of the database.
+
 ## Contributors
 
 - Eli Lauffenburger
