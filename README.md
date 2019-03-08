@@ -35,7 +35,7 @@ Begin your database search by selecting one of four options:
 - Search based on company name.
 - Exit the database.
 
-**Option One - Filter by Country**
+#### Option One - Filter by Country
 
 Upon selecting this option you'll be given a list of all countries that have certified B-Corporations. Select one and you'll be brought to a menu for that country with the following options:
 
@@ -66,7 +66,7 @@ Upon selecting a company, you'll be given a short description along with a decis
 
 - You may return to the main menu from this page.
 
-**Option Two - Filter by Industry**
+#### Option Two - Filter by Industry
 
 Upon selecting this option you'll be given a list of all industries that have certified B-Corporations. Select one and you'll be brought to a menu for that industry with the following options:
 
@@ -77,7 +77,7 @@ Upon selecting this option you'll be given a list of all industries that have ce
 
 - Upon selecting a company, you'll be given a short description along with a decision to see more info (see company **info page** above) or return to the main menu.
 
-**Option Three - Search by Company Name**
+#### Option Three - Search by Company Name
 
 Upon selecting this option you'll be asked to type the full name of the company you're searching for. The search is case-sensitive and strict.
 
@@ -85,7 +85,7 @@ Upon a successful search, you'll be given a short description of the company alo
 
 That's it! You're now a master. This database was designed to be simple in both design and usage.
 
-**Additional Help**
+#### Additional Help
 
 A video demo has been uploaded in the root directory of this repository to demonstrate usage of the database.
 
