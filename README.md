@@ -6,7 +6,7 @@ The database was seeded using a CSV found at (https://data.world/blab/b-corp-imp
 
 "Certified B Corporations are businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose. B Corps are accelerating a global culture shift to redefine success in business and build a more inclusive and sustainable economy."
 
-**Credit:**[About B-Corps](https://bcorporation.net/about-b-corps)
+**Credit:** [About B-Corps](https://bcorporation.net/about-b-corps)
 
 ## Usage Guide
 
