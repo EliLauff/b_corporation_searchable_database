@@ -28,12 +28,12 @@ The database was made with the intention of demonstrating object relationships b
 - An industry has many companies.
 - Through companies, a country has many industries and an industry has many countries.
 
-* Begin your database search by selecting one of four options:
+Begin your database search by selecting one of four options:
 
-  1. Filter by country first.
-  2. Filter by industry first.
-  3. Search based on company name.
-  4. Exit the database.
+- Filter by country first.
+- Filter by industry first.
+- Search based on company name.
+- Exit the database.
 
 **Option One - Filter by Country**
 
