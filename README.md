@@ -94,6 +94,6 @@ That's it! You're now a master. This database was designed to be simple in both 
 
 **This work is licensed under the terms of the MIT license.**
 
-**B-Corporations Homepage:**[link](https://bcorporation.net/)
+**B-Corporations Homepage:** [link](https://bcorporation.net/)
 
-**CSV Source, data.world:**[link](https://data.world/blab/b-corp-impact-data)
+**CSV Source, data.world:** [link](https://data.world/blab/b-corp-impact-data)
