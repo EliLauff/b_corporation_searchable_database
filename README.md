@@ -5,7 +5,8 @@ This database is used to demonstrate what we've learned about using ActiveRecord
 The database was seeded using a CSV found at (https://data.world/blab/b-corp-impact-data) and aims to promote visibility of certified B-Corporations:
 
 "Certified B Corporations are businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose. B Corps are accelerating a global culture shift to redefine success in business and build a more inclusive and sustainable economy."
-(https://bcorporation.net/about-b-corps)
+
+**Credit:**[About B-Corps](https://bcorporation.net/about-b-corps)
 
 ## Usage Guide
 
@@ -13,10 +14,10 @@ The database was seeded using a CSV found at (https://data.world/blab/b-corp-imp
 
 1. Fork and clone this repository to your local machine.
 2. Navigate to the cloned directory
-3. Run `ruby bundle install`
-4. Your models should have methods that answer interesting questions about the data. For example, if you've collected info about movie reviews, what is the most popular movie? What movie has the most reviews?
-5. You should provide a CLI to display the return values of your interesting methods.
-6. Use good OO design patterns. You should have separate classes for your models and CLI interface.
+3. Run `bundle install`
+4. Run `rake db:migrate`
+5. Run `rake db:seed` and wait a few moments while the database is populated.
+6. You're ready to go! Run `bundle exec ruby bin/run.rb` from the main project directory to enter the database.
 
 **Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
 
